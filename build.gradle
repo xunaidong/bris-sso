@@ -1,0 +1,10 @@
+apply plugin: 'war'
+apply plugin: 'maven'
+apply plugin: 'eclipse'
+repositories {
+	mavenLocal()
+	maven { url "http://maven.oschina.net/content/groups/public/"}
+}
+dependencies {
+	compile 'org.springframework:spring-context:3.2.8.RELEASE'
+}
