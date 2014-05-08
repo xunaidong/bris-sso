@@ -2,7 +2,6 @@ apply plugin: 'war'
 apply plugin: 'maven'
 apply plugin: 'eclipse'
 apply plugin: 'jetty'
-contextPath = 'sso'
 stopPort = 8099
 stopKey = 'ss'
 repositories {
