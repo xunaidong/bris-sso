@@ -10,15 +10,11 @@ import org.springframework.util.Assert;
 import cn.unicorn.boot.dao.UserRepository;
 import cn.unicorn.boot.domain.User;
 
-@Service
+@Service("userService")
 public class UserServiceImpl implements IUserService {
+	@Autowired
 	private UserRepository userRepository;
 	//private static Logger _log = LoggerFactory.getLogger(UserServiceImpl.class);
-
-	@Autowired
-	public UserServiceImpl(UserRepository userRepository) {
-		this.userRepository = userRepository;
-	}
 
 	@Transactional(value = TxType.NOT_SUPPORTED)
 	public boolean checkLogin(String username, String password) {
